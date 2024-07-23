@@ -26,3 +26,39 @@ img {
     object-fit: cover;
     border-radius: 5px;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+#dog-breeds {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#dog-breeds li {
+  background-color: #e6f2ff; /* Soft blue background */
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#dog-breeds li:hover {
+  background-color: #cce5ff; /* Slightly darker blue on hover */
+}
+
+#dog-breeds li.clicked {
+  color: #ff4d4d; /* Red text for clicked items */
+}
+
+@media (min-width: 768px) {
+  #dog-breeds {
+      column-count: 3;
+      column-gap: 20px;
+  }
+}
